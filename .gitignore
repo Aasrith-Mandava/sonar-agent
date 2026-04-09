@@ -1,0 +1,80 @@
+# ─── Secrets & environment ────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+secrets/
+credentials.json
+
+# ─── Python ───────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+.python-version
+
+# ─── Node / frontend ──────────────────────────────────────────────────────
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+out/
+.cache/
+.parcel-cache/
+*.tsbuildinfo
+.eslintcache
+
+# ─── SonarAgent runtime artifacts ─────────────────────────────────────────
+# Local SQLite DB (contains scan history, fixes, agent config)
+backend/app.db
+backend/app.db-journal
+backend/*.sqlite*
+
+# Cloned target repos (managed by github_service.clone_or_pull)
+backend/repos/
+
+# Application logs (rotating file handler)
+backend/logs/
+*.log
+
+# sonar-scanner working directories
+.scannerwork/
+.sonar/
+
+# Alembic generated versions are committed; only ignore caches
+backend/alembic/__pycache__/
+
+# ─── IDE / editor / OS ────────────────────────────────────────────────────
+.idea/
+.vscode/
+!.vscode/settings.json.example
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ─── Claude Code agent runtime ────────────────────────────────────────────
+.claude/
